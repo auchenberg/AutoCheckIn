@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<p>Welcome, {{ user.nickname() }} <a href="{{ logout_url }}">sign out</a></>
+
+	<p>This system will fetch your location every 5min, and check you into the near by favorite venue at Foursquare.</p>
+	{% if isFoursquareInstalled == False %}
+		<p><a href="auth/foursquare">Authorize foursquare</a></p>
+	{% endif %}
+	{% if isLatitudeInstalled == False %}
+		<p><a href="auth/latitude">Authorize latitude</a></p>
+	{% endif %}	 
+	<p>Installed services:</p>
+	<ul>
+	{% for task in tasks %}
+		<li>{{ task.name }}  (<a href="/delete/{{ task.key().id() }}">remove</a>)</li>
+	{% endfor %}
+	</ul>
+{% endblock %}

@@ -1,0 +1,4 @@
+cron:
+- description: Get location for all users
+  url: /cron/autocheckin
+  schedule: every 5 minutes

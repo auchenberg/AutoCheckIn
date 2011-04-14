@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<div class="settings">
+		<h2>Settings</h2>
+	
+		<form method="post" action="/profile/settings">
+			<p>I'm at a new location when I moved more than
+				<select name="location-distance-threshold">
+					<option{% if settings['distanceSetting'] == 10 %} selected{% endif %}>10</option>
+					<option{% if settings['distanceSetting'] == '50' %} selected{% endif %}>50</option>
+					<option{% if settings['distanceSetting'] == '100' %} selected{% endif %}>100</option>
+					<option{% if settings['distanceSetting'] == '300' %} selected{% endif %}>300</option>
+					<option{% if settings['distanceSetting'] == '500' %} selected{% endif %}>500</option>
+					<option{% if settings['distanceSetting'] == '1000' %} selected{% endif %}>1000</option>
+				</select> meters.</p>
+			<p>I should stay at the same spot for 
+					<select name="location-time-threshold">
+						<option{% if settings['timeSetting'] == '0' %} selected{% endif %}>0</option>
+						<option{% if settings['timeSetting'] == '5' %} selected{% endif %}>5</option>
+						<option{% if settings['timeSetting'] == '10' %} selected{% endif %}>10</option>
+						<option{% if settings['timeSetting'] == '15' %} selected{% endif %}>15</option>
+						<option{% if settings['timeSetting'] == '20' %} selected{% endif %}>20</option>
+						<option{% if settings['timeSetting'] == '30' %} selected{% endif %}>30</option>
+						<option{% if settings['timeSetting'] == '60' %} selected{% endif %}>60</option>
+					</select> minutes, before I want to check-in.</p>	
+			<!--<p>The accuracy should be better than 
+					<select name="location-accuracy-threshold">
+						<option{% if settings['accuracySetting'] == '50' %} selected{% endif %}>50</option>
+						<option{% if settings['accuracySetting'] == '100' %} selected{% endif %}>100</option>
+						<option{% if settings['accuracySetting'] == '150' %} selected{% endif %}>150</option>
+						<option{% if settings['accuracySetting'] == '200' %} selected{% endif %}>200</option>
+						<option{% if settings['accuracySetting'] == '300' %} selected{% endif %}>300</option>
+						<option{% if settings['accuracySetting'] == '500' %} selected{% endif %}>500</option>
+					</select> meters, before it's an acceptable location.</p> -->					
+			<p><button class="button" type="submit">Save</input></button>
+		</form>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+body { text-align: center; min-width: 960px;  }
+body > header, body > header a, body > header:visited { color: #b4b5b3; }
+
+a:link, a:visited { color: #919191; }
+h1 { font-size: 4em; font-weight: bold; margin: 0; padding:0; }
+h2 { font-size: 1.3em; font-weight: normal; margin: 0; padding: 0; }
+
+.button, .button:link { display: inline-block; color: #fff; padding: 15px; font-size: 1.3em; color: #fff;  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); box-shadow: 0 1px 2px rgba(0,0,0,.2); border: solid 1px #b7b7b7; background: #fff; background: -webkit-gradient(linear, left top, left bottom, from(#134ca4), to(#11428a)); background: -moz-linear-gradient(top, #134ca4, #11428a);  }
+.button:hover, .button:visited { color: #fff; cursor: pointer; background: #ededed; background: -webkit-gradient(linear, left top, left bottom, from(#134ca4), to(#0c3067)); background: -moz-linear-gradient(top, #134ca4, #0c3067); }
+
+header { position: absolute; left: 0; right: 0; top: 0; height: 285px; display: block; text-align: left; margin-bottom: 30px; -webkit-user-select: none;  user-select: none; -moz-user-select: none;}
+header h1 { background: #003366 url(/static/logo.png); width: 175px; height: 55px; position: absolute; top: 0; left: 0; z-index: 5; }
+header h1 a { text-indent: -1000px; width: 175px; height: 55px; position: absolute; top: 0; left: 0; z-index: 5; }
+
+header > div.content { width: 900px; position: absolute; z-index: 4; left: 50%; margin-left: -450px; top: 0; height: 285px;  }
+header > div.bg { background: url(/static/cityforeground.gif) repeat-x; height: 285px; position: absolute; left: 0; right: 0; z-index: 2;}
+header > div.sun { background: #11438a url(/static/citybackground.jpg); width: 900px; height: 285px; position: absolute; left: 50%; margin-left: -400px; z-index: 1;}
+header > div.left { background: #11438a; width: 30%; height: 285px; position: absolute; left: 0; z-index: 1;}
+header > div.right { background: #11438a; width: 30%; height: 285px; position: absolute; right: 0; z-index: 1;}
+header h2{ margin-top: 150px; font-weight: normal; font-size: 334%; color: #fff; }
+
+div.page { width: 900px; margin: 0 auto; text-align: left; }
+div.page > div.content { position: absolute; top: 285px; bottom: 0; margin-left: -450px; width: 900px; left: 50%;}
+
+/* Welcome */
+div.welcome  { padding-top: 50px; }
+.button.signup { position: absolute; right: -20px; top: -90px; -moz-box-shadow: 0 0 1em #888; -webkit-box-shadow: 0 0 1em #888;  background-color: #a00; border: 1px solid #fff; z-index: 20;}
+div.welcome { font-size: 131%; }
+div.welcome > h3 { margin-left: 60px;}
+div.welcome > ul { margin-top: 50px; }
+div.welcome > ul > li { float: left; width: 300px; text-align: center; position: relative; height: 190px;}
+div.welcome > ul > li > img { display: block; margin: 0 auto;}
+div.welcome > ul > li > p { position: absolute; bottom: 0;}
+div.welcome > ul > li.foursquare > img { margin-top: 50px;} 
+div.welcome > ul > li.foursquare > p { left: 120px;} 
+div.welcome > ul > li.magic > p { left: 110px;} 
+div.welcome > ul > li.phones > p { left: 110px;} 
+
+/* Profile */
+div.profile { width: 900px; margin: 0 auto;}
+div.profile header { height: 140px; }
+div.profile header h1 { top: -110px;}
+div.profile header > div.content {top: 110px; height: 30px; z-index: 11; }
+div.profile header > div.content > p { text-align: right; padding-right: 20px;}
+div.profile header > div.bg { height: 100px;}
+div.profile header > div.sun { height: 100px; }
+div.profile header > div.left { height: 100px;}
+div.profile header > div.right { height: 100px; }
+div.profile > div.content { margin-top: 200px;}
+div.profile > div.content h2 { font-weight: normal; font-size: 245%; margin-bottom: 30px; }
+
+.twitter { position: absolute; right: 0; top:0; width: 200px; height: 200px; overflow: hidden; z-index: 10;}
+.twitter > div {
+  background-color: #a00;
+  overflow: hidden;
+  position: absolute;
+  right: -4em;
+  top: 4em;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-box-shadow: 0 0 1em #888;
+  -webkit-box-shadow: 0 0 1em #888;
+  
+}
+.twitter > div >  a {
+  border: 1px solid #faa;
+  color: #fff;
+  display: block;
+  font: bold 90% 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+  margin: 0.05em 0 0.075em 0;
+  padding: 1em 5.5em;
+  text-align: center;
+  text-decoration: none;
+  /* shadow */
+  text-shadow: 0 0 0.5em #444;
+}
+
+
+div.settings { text-align: left;}
+div.settings p { margin-bottom: 10px;}
+
+
+

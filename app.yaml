@@ -1,0 +1,29 @@
+application: autocheckin
+version: 1-2-3
+runtime: python
+api_version: 1
+
+handlers:
+- url: /static
+  static_dir: autocheckin/web/static
+                
+- url: /cron/autocheckin
+  script: autocheckin/services/cron.py
+
+- url: /task/checkin
+  script: autocheckin/services/checkin.py
+  login: admin 
+  
+- url: /task/location
+  script: autocheckin/services/location.py
+
+- url: /profile
+  script: app_profile.py
+  login: required
+
+- url: /profile/.*
+  script: app_profile.py
+  login: required
+
+- url: /.*
+  script: app.py  
